@@ -73,7 +73,7 @@ nums = evenFinder(nums);
 
 var nums = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 var evens = [];
-var odds = []
+var odds = [];
 //Write a function called divider that is given three arguments, nums, evens, and odds.
 //Have divider return an Array with the first item in the array being the evens array (all the even values from nums) and the second item in the Array being the odds array(all the odd values from nums).
 
@@ -81,8 +81,7 @@ var divider = function(nums, evens, odds) {
   for (var i = 0; i < nums.length; i++) {
      if (nums[i] % 2 === 0) {
          evens.push (nums[i]);
-         }
-    else{
+         } else {
         odds.push (nums[i]);
    } 
 } 
@@ -141,6 +140,7 @@ var removeItem = function(list, item) {
   for (var i = 0; i > list.length; i++) {
     if (list[i] === item){
       list.splice(i, 1);
+      i--;
     }
   }
   return list;
@@ -181,8 +181,8 @@ maker();
 var numbers = [5, '9', 16, 19, '25', '34', 48];
 //Write a function called addTen that is given 'numbers' as it's only argument and returns a new
 //array after adding ten to each item in numbers. *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
-var newArray = [];
 var addTen =  function (numbers) {
+  var newArray = [];
   for (var i = 0; i < numbers.length; i++){
      numbers[i] = parseInt(numbers[i]);
      newArray[i] = numbers[i] + 10;
